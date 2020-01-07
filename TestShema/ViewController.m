@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import <Shema/Shema.h>
 
 @interface ViewController ()
 
@@ -17,6 +18,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    ShemaContainer *shema = [[ShemaContainer alloc] initWithFrame:self.view.frame];
+    [self.view addSubview:shema];
+    
+    [shema LoadBgImage:[UIImage imageNamed:@"sample2.jpg"]];
 }
 
 
